@@ -1,0 +1,54 @@
+
+body
+{
+background-image:url("https://mcdn.wallpapersafari.com/medium/53/24/ytN7zm.jpg");
+height: 100lvh;
+width: 100lvw;
+margin-left:30%;
+margin: auto auto auto auto;
+background-size: cover;
+margin-top: 0px;
+color:white;
+text-align: left;
+}
+.div1
+{
+	 text-align: left center;
+	color:white;
+	background-color:transparent;
+	background: 0 0 0 0;
+	width:70%;
+	
+	opacity:80%;
+	font-weight:bold;
+	font-family:'Open-Sans',sans-serif;
+	padding:30px;
+	padding-right: 30px;
+	box-sizing:border-box;
+	font-size:20px;
+}
+input[type=password],input[type=email]
+{
+	width:50%;
+	padding:15px;
+	margin-bottom:20px;
+	border:none;
+	border-radius:  20px;
+	text-align: center;
+}
+select[type=option]
+{
+	width:50%;
+	padding:15px;
+	margin-bottom:20px;
+	border:none;
+	border-radius:20px;
+	/* text-align: center; */
+	
+}
+
+.form-control
+{
+	text-align: center;
+
+}

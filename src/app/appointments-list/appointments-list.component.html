@@ -1,0 +1,39 @@
+<h2 class="fw-bold" >Appointment List</h2>
+<h4>
+    <button class="btn btn-primary" *ngIf="role=='admin'" (click)="add()">Add Appointment</button>
+    <button class="btn btn-danger " *ngIf="role=='admin'"  style="margin-left: 80%;" (click)="back()">Back</button>
+</h4>
+<table class="table table-stripped table-bordered ">
+    <thead class=" p-3 mb-2 bg-primary text-white">
+        <tr>
+            <th>ID</th>
+            <th>Doctor ID</th>
+            <th>Patient ID</th>
+            <th>Patient name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Date & Time</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let app of appointments"  class="text-light bg-secondary">
+            <td>{{app.id}}</td>
+            <td>{{app.doctor.id}}</td>
+            <td>{{app.patient.id}}</td>
+            <td>{{app.patient.name}}</td>
+            <td>{{app.patient.gender}}</td>
+            <td>{{app.patient.age}}</td>
+            <td>{{app.appointmentDateTime|date:'medium'}}</td>
+            <td>{{app.status}}</td>
+            <td >
+                <button class="btn btn-light" (click)="updateApp(app.id)">Update</button>
+                &nbsp;
+                <button class="btn btn-danger" *ngIf="role=='admin'"  (click)="deleteApp(app.id)">Delete</button>&nbsp;&nbsp;
+                <!-- <button class="btn btn-outline-warning" (click)="ViewApp(app.id)">View</button>                -->
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

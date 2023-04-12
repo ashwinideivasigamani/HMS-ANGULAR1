@@ -1,0 +1,21 @@
+<h3> View Appointment Details</h3>
+<div>
+    <div>
+        <label> <b> S.no: </b></label> {{app.id}}
+    </div>
+    <div>
+        <label> <b> Doctor: </b></label> {{app.doctor.id}}
+    </div>
+    <div>
+        <label> <b> PatientId: </b></label> {{app.patient.id}}
+    </div>
+    <div>
+        <label> <b> Date & Time: </b></label> {{app.appointmentDateTime|date:'medium'}}
+    </div>
+    <div>
+        <label> <b> Status: </b></label> {{app.status}}
+    </div>
+    
+</div>
+
+

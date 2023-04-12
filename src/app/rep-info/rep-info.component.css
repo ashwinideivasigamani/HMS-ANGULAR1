@@ -1,0 +1,13 @@
+body
+{
+ 
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:white ;
+    background-image: url('https://th.bing.com/th/id/R.4717e32fa6118d2c2b02bc647e102ef0?rik=4DKzF7kaW11E3Q&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fSolid-blue-background.jpg&ehk=D9UJaPGfrCfVtXtRsPqZlqKhqBddRgYIwfIjO1mlsQs%3d&risl=&pid=ImgRaw&r=0');
+   /* background-image: url('https://th.bing.com/th/id/R.f363adca4b45ce545551383ac05190f6?rik=kqKR6yaeZIqJNA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fNYmOsQQ.jpg&ehk=JAlOc2XXVc2x4RveuX%2bmCqxBytMWFHc1LXaLaWqfFnU%3d&risl=&pid=ImgRaw&r=0'); */
+    /* background-image: url('https://ewscripps.brightspotcdn.com/dims4/default/a801103/2147483647/strip/true/crop/640x336+0+72/resize/1200x630!/quality/90/?url=https:%2F%2Fmediaassets.wtxl.com%2Fwtxl.com%2Fcontent%2Ftncms%2Fassets%2Fv3%2Feditorial%2Fe%2F23%2Fe23fc4d6-d92f-11e2-b7e8-0019bb30f31a%2F51c2313768261.image.jpg'); */
+    height: 140vh;
+    width: 100vw;
+}

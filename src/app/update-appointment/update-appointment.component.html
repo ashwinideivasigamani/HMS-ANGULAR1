@@ -1,0 +1,90 @@
+
+    <body>
+        <header>
+            <div class="header">
+                <nav  class="navbar navbar-expand-lg  bg-info   justify-content-between list-style-type: none ; ">
+                 
+              
+          
+          <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              
+            
+              <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"> <a class="nav-link" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; font-weight: bolder;  padding-left: 0px; font-variant: normal;">  UPDATE BOOKED APPOINTMENT  ....</a></li>
+                
+                <li> <a class="nav-link" routerLink="/login" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; padding-left: 800px;"> LOGOUT</a></li>
+                <!-- <a class="nav-link" routerLink="/patientInfo" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; "> PROFILE</a></li> -->
+                
+              </ul>
+            </div>
+          </nav>
+          </nav>
+          </div>
+          </header>
+        <div>
+            <h3 class="text-center" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: aliceblue;">Update Appointment</h3><br><br>
+    <div class=" col-md-6 offset-md-3">
+        <form  #a=ngForm (ngSubmit)="a.form.valid&&onSub()" novalidate>
+            <div class="form-group">
+                <label>Patient ID</label>
+                <input type="text" class="form-control" id="patientId" [(ngModel)]="app.patient.id" name="patientId"  placeholder="Enter Patient Id" #patient="ngModel" [ngClass]="{'is-invalid':a.submitted && patient.invalid}" required>
+                <div class="invalid-feedback">PatientId is required</div>
+            </div>
+            <div class="form-group">
+                <label>Patient name</label>
+                <input type="text" class="form-control"  placeholder="Enter Patient Name" id="patientname" [(ngModel)]="app.patient.name" name="patientname" #patientnm="ngModel" [ngClass]="{'is-invalid':a.submitted && patientnm.invalid}" required>
+                <div class="invalid-feedback">PatientName is required</div>
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input type="text" class="form-control"  placeholder="Enter Patient Age" id="patientage" [(ngModel)]="app.patient.age" name="patientage" #age="ngModel" [ngClass]="{'is-invalid':a.submitted && age.invalid}" required>
+                <div class="invalid-feedback">Age is required</div>
+            </div>
+            
+            <div class="form-group">
+                <label>Gender</label>
+                <!-- <input type="text" class="form-control" id="gen" [(ngModel)]="app.patient.gender" name="gen" #gen="ngModel" [ngClass]="{'is-invalid':a.submitted && gen.invalid}" required> -->
+                <select name="gen" id="gen" class="form-control" type="option" [(ngModel)]="app.patient.gender" #gen="ngModel" [ngClass]="{'is-invalid':a.submitted && gen.invalid}"  placeholder="select one" required>
+                    <option value="">select</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    </select>
+                <div class="invalid-feedback">Select one..</div>
+            </div>
+            <div class="form-group">
+                <label>Doctor ID</label>
+                <input type="text" class="form-control"  placeholder="Enter Doctor Id" id="doctorId" [(ngModel)]="app.doctor.id" name="doctorId"#doctor="ngModel" [ngClass]="{'is-invalid':a.submitted && doctor.invalid}" required>
+                <div class="invalid-feedback">DoctorId is required</div>
+            </div>
+            <div class="form-group">
+                <label>Date & Time</label>
+                <input type="datetime-local" class="form-control"  placeholder="Enter Date & time" id="date" [(ngModel)]="app.appointmentDateTime" name="date" #dob="ngModel" [ngClass]="{'is-invalid':a.submitted && dob.invalid}" required>
+                <div class="invalid-feedback">Date & Time is required</div>
+            </div>
+            <div class="form-group">
+                <label>Status</label>
+                <!-- <input type="text" class="form-control" id="status" [(ngModel)]="app.status" name="status" #status="ngModel" [ngClass]="{'is-invalid':a.submitted && status.invalid}" required> -->
+                <select name="status" id="status" class="form-control" type="text" [(ngModel)]="app.status" #status="ngModel" [ngClass]="{'is-invalid':a.submitted && status.invalid}" required>
+                    <option value="">select</option>
+                    <option value="Booked">Booked</option>
+                    <option value="canceled">Canceled</option>
+                    <option value="wait">Waiting</option>
+                </select>
+            </div>
+            <br><br>
+            <button class="btn btn-primary  " style="height: 30%; width: 35%;" type="submit">UPDATE</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" style="width: 30%;" type="reset">CANCEL</button>
+            <br>
+            
+        </form>
+       
+    </div>
+
+
+
+</div>
+</body>
+<app-footer></app-footer>
+
+

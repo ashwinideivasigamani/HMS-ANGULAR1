@@ -1,0 +1,25 @@
+.doctor-d1
+{
+    
+}
+/* .div-d-d1
+{
+background-color: darkblue;
+color: aliceblue;
+width: 50%;
+padding-left: 10px;
+margin-top: 10px;
+margin-left: 10px;
+margin-bottom: 10px;
+margin-right: 10px;
+} */
+
+body
+{
+background-image:url('../../assets/instituteexpertises.jpg');
+margin-left:30%;
+margin-right:30%;
+margin-top:30px;
+margin-bottom: 30px;
+color:forestgreen;
+}

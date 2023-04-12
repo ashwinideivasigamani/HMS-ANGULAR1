@@ -1,0 +1,10 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://cdn.wallpapersafari.com/22/82/ln43X2.jpg')
+}
+label{
+    font-size: larger; 
+    font-weight: 600;
+    color: cornsilk;
+}

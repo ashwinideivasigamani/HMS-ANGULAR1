@@ -1,0 +1,61 @@
+<body> <header>
+    <div class="header">
+        <nav  class="navbar navbar-expand-lg  bg-info   justify-content-between list-style-type: none ; ">
+         
+      
+  
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item"> <a class="nav-link" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; font-weight: bolder;  padding-left: 0px; font-variant: normal;">  UPDATE BILL LIST   ....</a></li>
+        
+        <li> <a class="nav-link" routerLink="/login" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; padding-left: 900px;"> LOGOUT</a></li>
+        <!-- <a class="nav-link" routerLink="/patientInfo" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; "> PROFILE</a></li> -->
+        
+      </ul>
+    </div>
+  </nav>
+  </nav>
+  </div>
+  </header>
+    
+
+<h3 class="text-center text-light">Update Bill</h3>
+    <div class=" col-md-6 offset-md-3">
+        <form #b= ngForm (ngSubmit)="b.form.valid&&onSub()" novalidate>
+            <div class="form-group">
+                <label>Patient ID::</label>
+                <input type="text" class="form-control" style="width: 80%;" id="patientID" [(ngModel)]="bill.patient.id" name="patientID" #patient="ngModel" [ngClass]="{'is-invalid':b.submitted&&patient.invalid}" required>
+                <div class="invalid-feedback">PatientId is required</div><br>
+            </div>
+            <div class="form-group">
+                <label>Amount::</label>
+                <input type="text" style="width: 80%;" class="form-control" id="amount" [(ngModel)]="bill.totalAmount" name="amount"  #amount="ngModel" [ngClass]="{'is-invalid':b.submitted&& amount.invalid}" required>
+                <div class="invalid-feedback">Please fill the amount</div><br>
+            
+            </div>
+            <div class="form-group">
+                <label>Date & Time::</label>
+                <input type="datetime-local" style="width: 80%;" class="form-control" id="date" [(ngModel)]="bill.billDate" name="date"  #dob="ngModel" [ngClass]="{'is-invalid':b.submitted&&dob.invalid}" required>
+                <div class="invalid-feedback">Date & Time is required</div><br>
+            </div>
+            <div class="form-group">
+                <label>Status::</label>
+                <select name="status" style="width: 80%;" id="status" class="form-control" type="text" [(ngModel)]="bill.paymentStatus" #status="ngModel" [ngClass]="{'is-invalid':b.submitted && status.invalid}" required>
+                    <option value="">select</option>
+                    <option value="Paid">Payment completed</option>
+                    <option value="canceled">Not completed</option>
+                    <option value="wait">pending</option>
+                </select>
+                <div class="invalid-feedback">Status is required ,please select one</div>
+            </div>
+            <br>
+            <button class="btn btn-primary" style="width: 20%; " type="submit">UPDATE</button>&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger" style="width: 20%;" type="reset">CANCEL</button>
+            <br>
+        </form>
+    </div>
+    </body>
+    <app-footer></app-footer>

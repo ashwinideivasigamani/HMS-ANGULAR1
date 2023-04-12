@@ -1,0 +1,11 @@
+body{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/330/216/non_2x/healthcare-and-medical-futuristic-abstract-design-free-vector.jpg');
+    height: 160vh;
+    width: 100vw;
+}
+label{
+    color: aliceblue;
+    font-size: medium;
+    font-weight: 700;
+    
+}

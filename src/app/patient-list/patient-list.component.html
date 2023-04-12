@@ -1,0 +1,44 @@
+
+
+<h2 class="fw-bold">Patient List</h2>
+<h4>
+    <button class="btn btn-primary" *ngIf="role=='admin'" (click)="add()">Add Patient</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-danger" *ngIf="role=='receptionist'"  style="margin-left: 80%;" (click)="back1()">Back</button>
+    <button class="btn btn-danger " *ngIf="role=='admin'" style="margin-left: 80%;" (click)="back()">Back</button>
+</h4>
+<table class="table table-stripped table-bordered ">
+    <thead class=" p-3 mb-2 bg-info text-white">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Address</th>
+            
+            <th>Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let patient of patients"  class="text-light bg-secondary">
+            <td>{{patient.id}}</td>
+            <td>{{patient.name}}</td>
+            <td>{{patient.email}}</td>
+            <td>{{patient.password}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.gender}}</td>
+            <td>{{patient.phone}}</td>
+            <td>{{patient.address}}</td>
+            
+            <td >
+                <button class="btn btn-light" (click)="updatePatient(patient.id)">Update</button>
+                &nbsp;
+                <button class="btn btn-danger" *ngIf="role=='admin'"  (click)="deletePatient(patient.id)">Delete</button>                
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

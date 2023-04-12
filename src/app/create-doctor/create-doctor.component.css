@@ -1,0 +1,54 @@
+body
+{
+background-image:url('../../assets/instituteexpertises.jpg');
+margin-left:20%;
+margin-right:20%;
+margin-top:80px;
+color:aliceblue;
+width: 60%;
+font-weight: bold;
+}
+.div1
+{
+	color:darkblue;
+	background-color:transparent;
+	opacity:80%;
+    width: 90%;
+	font-weight:bold;
+	font-family:'Open-Sans',sans-serif;
+	padding:30px;
+	box-sizing:border-box;
+	font-size:20px;
+}
+input[type=password],input[type=email],input[type=text],select[type=option]
+{
+	width:100%;
+	padding:15px;
+	margin-bottom:10px;
+	border:none;
+	border-radius:10px;
+	
+}
+.registerbtn
+{
+	background-color:green;
+	color:white;
+	opacity:80%;
+	width:40%;
+	padding:10px;
+	cursor:pointer;
+	font-weight:bold;
+	font-family:'Open-Sans',sans-serif;
+	
+}
+.rbtn
+{
+	background-color:red;
+	color:white;
+	opacity:80%;
+	width:40%;
+	padding:10px;
+	cursor:pointer;
+	font-weight:bold;
+	font-family:'Open-Sans',sans-serif;
+}

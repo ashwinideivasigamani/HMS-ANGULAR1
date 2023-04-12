@@ -1,0 +1,68 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="text-align: justify; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Profile Page</h1>
+<table class="container">
+  <tr style="text-align: left;">
+    <td><button class="btn btn-primary" (click)="goToUpdatePro(rep.email)">Edit Profile</button></td>
+  </tr>
+    <tr>
+        <td rowspan="18"><img src="https://www.shareicon.net/data/2016/04/14/492851_admin_256x256.png" height="350" width="350"/></td>
+    </tr>
+    <tr>
+      <td>Id  :</td>
+      <td>{{rep.id}}</td>
+  </tr><br>
+    
+    <tr>
+        <td> Name : </td>
+        <td>{{rep.name}}</td>
+        
+    </tr><br>
+    <tr>
+        <td> Age :</td>
+        <td>{{rep.age}}</td>
+    </tr><br>
+    <tr>
+        <td>Email :</td>
+        <td>{{rep.email}}</td>
+    </tr><br>
+    <tr>
+        <td>Gender:</td>
+        <td>{{rep.gender}}</td>
+    </tr><br>
+    <tr>
+        <td>Contact :</td>
+        <td>{{rep.phone}}</td>
+    </tr><br>
+    
+    <tr>
+        <td>Password :</td>
+        <td>{{rep.password}}</td>
+    </tr><br>
+    <tr>
+        <td>City   :</td>
+        <td>{{rep.city}}</td>
+    </tr><br>
+   
+    <tr>
+        <td>Address :</td>
+        <td>{{rep.address}}</td>
+    </tr><br>
+    
+</table>
+</body>
+</html>
+  
+

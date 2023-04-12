@@ -1,0 +1,32 @@
+.carousel-inner {
+    width: 100%; /* Set the width of the carousel to 50% */
+    margin: 0 auto; /* Center the carousel horizontally */
+    float: left;
+  }
+  
+  .carousel-item img {
+    height: auto; /* Make the images adjust their height automatically */
+    max-height: 100%; /* Set the maximum height of the images to 100% of their container */
+    max-width: 100%; /* Set the maximum width of the images to 100% of their container */
+    height: 100vh;
+    width: 100vw;
+  }
+  body{
+    height: auto; /* Make the images adjust their height automatically */
+    max-height: 100%; /* Set the maximum height of the images to 100% of their container */
+    max-width: 100%; /* Set the maximum width of the images to 100% of their container */
+    height: 100vh;
+    width: 100vw;
+    
+  }
+  p{
+   
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+  }
+  
+  
+

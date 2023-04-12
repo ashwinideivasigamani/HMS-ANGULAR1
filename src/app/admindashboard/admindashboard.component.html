@@ -1,0 +1,93 @@
+<header>
+    <div class="header">
+        <nav  class="navbar navbar-expand-lg  bg-info   justify-content-between list-style-type: none ; ">
+         
+      
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item"> <a class="nav-link" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; font-weight: bolder;  padding-left: 0px; font-variant: normal;"> HI   ADMIN   WELLCOME   BACK  TO  DASHBOARD ....</a></li>
+        <!-- <li> <a class="nav-link" routerLink="/admindashboard" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; "> DASHBOARD</a></li> -->
+        <li> <a class="nav-link" routerLink="/login" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; padding-left: 700px;"> LOGOUT</a></li>
+     
+        
+      </ul>
+    </div>
+  </nav>
+  </nav>
+  </div>
+  </header>
+
+<h1 style="color: black; font-family: 'Times New Roman', Times, serif;" >ADMIN DASHBOARD</h1>
+<br>
+<div>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="card-container d-flex flex-wrap text-center">
+        <div class="card mb-3 mr-3" style="width: 18rem;">
+            <img src="../../assets/hand.webp" class="card-img-top" alt="doctors">
+            <div class="card-body">
+                <h5 class="card-title">Patients</h5><br>
+                <p class="card-text">
+                   </p>
+                <a (click)="goToPatients()" class="btn btn-primary">View Lists</a>
+            </div>
+        </div>
+        
+        <div class="card mb-3 mr-3" style="width: 18rem;">
+            <img src="../../assets/rece.webp" class="card-img-top" alt="doctors">
+            <div class="card-body">
+                <h5 class="card-title">Doctor</h5><br>
+                <p class="card-text">
+                </p>
+                <a (click)="goToDoctors()" class="btn btn-primary">View Lists</a>
+            </div>
+        </div>
+        <div class="card mb-3 mr-3" style="width: 18rem;">
+            <img src="../../assets/padips.webp" class="card-img-top" alt="doctors">
+            <div class="card-body">
+                <h5 class="card-title">Recepstionist</h5>
+                <p class="card-text">
+                    .</p>
+                <a (click)="goToReps()" class="btn btn-primary">View Lists</a>
+            </div>
+        </div>
+
+        <div class="card mb-3 mr-3" style="width: 18rem;">
+            <img src="../../assets/app3.png" class="card-img-top" alt="applist">
+            <div class="card-body">
+                <h5 class="card-title">AppointmentsList</h5><br>
+                <p class="card-text">
+                    </p>
+                <a (click)="goToAppsList()" class="btn btn-primary">View Lists</a>
+            </div>
+            </div>
+            <br>
+
+            <div class="card mb-3 mr-3" style="width: 18rem;">
+                <img src="../../assets/appoin.jpg" class="card-img-top" alt="applist">
+                <div class="card-body">
+                    <h5 class="card-title">Appointments</h5><br>
+                    <p class="card-text">
+                        </p>
+                    <a (click)="goToApps()" class="btn btn-primary">View Lists</a>
+                </div>
+                </div>
+                <br>
+
+                <div class="card mb-3 mr-3" style="width: 18rem;">
+                    <img src="../../assets/bill.png" class="card-img-top" alt="applist">
+                    <div class="card-body">
+                        <h5 class="card-title">BillGenration</h5>
+                        <p class="card-text">
+                        </p>
+                        <a (click)="goToBills()" class="btn btn-primary">View Lists</a>
+                    </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <app-footer></app-footer>
+

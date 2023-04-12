@@ -1,0 +1,58 @@
+.about-a7
+{
+    background-image:  url('../../assets/poster2.jpg');
+    background-size: cover;
+  
+    
+    background-position:centers ;
+    height: 100vh;
+    width: 100vw;
+}
+.about-a2
+{
+    background-image: url('../../assets/h3.jpg');
+    background-position:centers ;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.about-a3
+{
+    background-image: url('../../assets/h6.jpg');
+    background-position:centers ;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.about-a4
+{
+    background-image: url('../../assets/h5.jpg');
+    background-position:centers ;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.about-a5
+{
+    background-image: url('../../assets/h9.jpg');
+    background-position:centers ;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.about-a6
+{
+    background-image: url('../../assets/h2.jpg');
+    background-position:centers ;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.about-a1
+{
+    background-image: url('../../assets/h10.jpg');
+    background-position:centers ;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}

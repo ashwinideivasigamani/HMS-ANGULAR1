@@ -1,0 +1,82 @@
+<body>
+    <header>
+        <div class="header">
+            <nav  class="navbar navbar-expand-lg  bg-info   justify-content-between list-style-type: none ; ">
+             
+          
+      
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          
+        
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item"> <a class="nav-link" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; font-weight: bolder;  padding-left: 0px; font-variant: normal;">  UPDATE  RECEPTIONIST   ....</a></li>
+            
+            <li> <a class="nav-link" routerLink="/login" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; padding-left: 900px;"> LOGOUT</a></li>
+            <!-- <a class="nav-link" routerLink="/patientInfo" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; "> PROFILE</a></li> -->
+            
+          </ul>
+        </div>
+      </nav>
+      </nav>
+      </div>
+      </header>
+
+<h3 class="text-center text-white" style="font-size: xx-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">UPDATE RECEPTIONIST</h3><br><br>
+    <div class=" col-md-6 offset-md-3">
+        <form   #r=ngForm (ngSubmit)="r.form.valid&&onSub()" novalidate>
+            <div class="form-group">
+                <label>Name::</label>
+                <input type="text" style="width: 70%;" placeholder="Enter Name" class="form-control" id="name" [(ngModel)]="rep.name" name="name" #name="ngModel" [ngClass]="{'is-invalid':r.submitted&&name.invalid}" required>
+                <div class="invalid-feedback">name is required</div><br>
+            </div>
+            <div class="form-group">
+                <label>Age::</label>
+                <input type="text" style="width: 70%;" placeholder="Enter age" class="form-control" id="name" [(ngModel)]="rep.age" name="age" #age="ngModel" [ngClass]="{'is-invalid':r.submitted&&age.invalid}" required>
+                <div class="invalid-feedback">age is required</div><br>
+            </div>
+            <div class="form-group">
+                <label>Email::</label>
+                <input type="email" style="width: 70%;" placeholder="Example@gmail.com" class="form-control" id="email" [(ngModel)]="rep.email" name="email" #email="ngModel" [ngClass]="{'is-invalid':r.submitted&&email.invalid}" required>
+                <div class="invalid-feedback" >Email is required</div>
+                <div class="invalid-feedback">Email id must be valid</div><br>
+            </div>
+            
+            <div class="form-group">
+                <label>Gender</label>
+                <select type="text" class="form-control" style="width: 70%;" id="gender" [(ngModel)]="rep.gender" name="gender" #gender="ngModel" [ngClass]="{'is-invalid':r.submitted&&gender.invalid}" required>
+                    <option value="">Select</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+                <div class="invalid-feedback">Gender is required</div>
+            </div>
+            <div class="form-group">
+                <label>Phone::</label>
+                <input type="text" style="width: 70%;"  placeholder="Enter phone"class="form-control" id="phone" [(ngModel)]="rep.phone"  minlength="10" maxlength="10" name="phone" #phone="ngModel" [ngClass]="{'is-invalid':r.submitted&&phone.invalid}" required>
+                <div class="invalid-feedback">Phone is required</div><br>
+            </div>
+            <div class="form-group">
+                <label>Password::</label>
+                <input type="password" style="width: 70%;" placeholder="Enter password" class="form-control" id="password" [(ngModel)]="rep.password" name="password" minlength="6" #pwd="ngModel" [ngClass]="{'is-invalid':r.submitted&&pwd.invalid}" required>
+                <div class="invalid-feedback">Password is required </div>
+                <div class="invalid-feedback">Password must have at least 6 charcters </div><br>
+            </div>
+            <div class="form-group">
+                <label>City::</label>
+                <input type="text" style="width: 70%;" placeholder="Enter city" class="form-control" id="name" [(ngModel)]="rep.city" name="name" #ne="ngModel" [ngClass]="{'is-invalid':r.submitted&&ne.invalid}" required>
+                <div class="invalid-feedback">City is required</div><br>
+            </div>
+            <div class="form-group">
+                <label>Address::</label>
+                <input type="text" style="width: 70%;" placeholder="Enter address" class="form-control" id="name" [(ngModel)]="rep.address" name="name" #naeme="ngModel" [ngClass]="{'is-invalid':r.submitted&&naeme.invalid}" required>
+                <div class="invalid-feedback">Address is required</div><br>
+            </div>
+            <br>
+            <button class="btn btn-success" style="width: 20%;" type="submit">Update</button>&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-danger"  style="width: 20%;"type="reset">Cancel</button>
+            <br>
+        </form>
+    </div>
+    </body>
+    <app-footer></app-footer>

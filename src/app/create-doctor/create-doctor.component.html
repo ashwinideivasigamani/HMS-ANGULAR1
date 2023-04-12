@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header>
+    <div class="header">
+        <nav  class="navbar navbar-expand-lg  bg-info   justify-content-between list-style-type: none ; ">
+         
+      
+  
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      
+    
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item"> <a class="nav-link" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; font-weight: bolder;  padding-left: 0px; font-variant: normal;">  ADD RECEPTIONIST   ....</a></li>
+        
+        <li> <a class="nav-link" routerLink="/login" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; padding-left: 900px;"> LOGOUT</a></li>
+        <!-- <a class="nav-link" routerLink="/patientInfo" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; "> PROFILE</a></li> -->
+        
+      </ul>
+    </div>
+  </nav>
+  </nav>
+  </div>
+  </header>
+  <h1 style="text-align: center; font-size: xx-large; color: darkblue; font-weight: 900;">Add Doctor</h1>
+<body>
+
+<!-- <h3 class="text-center">Add Doctor</h3> -->
+    <div class=" col-md-6 offset-md-3">
+        <form  #d=ngForm (ngSubmit)=" d.form.valid&&onSubmit()"  novalidate>
+            <div class="div1">
+            
+                <label>Name::</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="doctor.name" name="name" #name="ngModel" [ngClass]="{'is-invalid':d.submitted&&name.invalid}" required>
+                <div class="invalid-feedback">Name is required</div>
+            
+                <label>Email::</label>
+                <input type="email" class="form-control" id="email" [(ngModel)]="doctor.email" name="email"#email="ngModel" email [ngClass]="{'is-invalid':d.submitted&&email.invalid}" required>
+                <div class="invalid-feedback">Email is required</div>
+                <!-- <div class="invalid-feedback">Email id must be valid</div> -->
+               
+                <label>Age::</label>
+                <input type="text" class="form-control" id="age" [(ngModel)]="doctor.age" name="age" #ng="ngModel" [ngClass]="{'is-invalid':d.submitted&&ng.invalid}" required>
+                <div class="invalid-feedback">age is required</div>
+
+                <label for="text">Gender</label>
+                <select name="gender" id="gender" class="form-control" type="option" [(ngModel)]="doctor.gender" #gender="ngModel" [ngClass]="{'is-invalid':d.submitted && gender.invalid}" required>
+                    <option value="">select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    </select>
+           
+                <label>Password::</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="doctor.password"  minlength="6" name="password" #password="ngModel" [ngClass]="{'is-invalid':d.submitted&&password.invalid}" required >
+                <div class="invalid-feedback">Password is required</div>
+                <!-- <div class="invalid-feedback">Password must have at least 6 characters</div> -->
+          
+                <label>City::</label>
+                <input type="text" class="form-control" id="city" [(ngModel)]="doctor.city" name="city"#cty="ngModel"  [ngClass]="{'is-invalid':d.submitted&&cty.invalid}" required>
+                <div class="invalid-feedback">City is required</div>
+
+                <label>Address::</label>
+                <input type="text" class="form-control" id="addres" [(ngModel)]="doctor.address" name="addrs"#addrs="ngModel"  [ngClass]="{'is-invalid':d.submitted&&addrs.invalid}" required>
+                <div class="invalid-feedback">address is required</div>
+                
+                <label>Specialization::</label>
+                <!-- <input type="text" class="form-control" id="specialization" [(ngModel)]="doctor. specialization" name="specialization"#spcl="ngModel" [ngClass]="{'is-invalid':d.submitted&&spcl.invalid}" required> -->
+                <select name="status" id="status" class="form-control" type="option" [(ngModel)]="doctor.specialization" #spcl="ngModel" [ngClass]="{'is-invalid':d.submitted && spcl.invalid}" required>
+                    <option value="">select</option>
+                    <option value="Oncology">Oncology</option>
+                    <option value="Opthamologist">Opthamologist</option>
+                    <option value="gianology">gianology</option>
+                    <option value="pediatrician">pediatrician</option>
+                    <option value="neurologist">neurologist</option>
+                    <option value="Dermatologist">Dermatologist</option>
+                    <option value="Surgeon">Surgeon</option>
+                    <option value="General surgen">General surgon</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Psychiatrist">Psychiatrist</option>
+                    <option value="Gynecologist">Gynecologist</option>
+                    <option value="Nephrologist">Nephrologist</option>
+                    
+                </select>
+                <div class="invalid-feedback"> Please Select one</div>
+            <!-- </div> -->
+            <br>
+            <button class="registerbtn" type="submit">ADD</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="rbtn" type="reset">CANCEL</button>
+            <br>
+        </div>
+        </form>
+    
+    </div>
+    
+     </body>
+     <app-footer></app-footer>
+    </html>

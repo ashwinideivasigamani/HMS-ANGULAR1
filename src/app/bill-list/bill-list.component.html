@@ -1,0 +1,33 @@
+<h2 class="fw-bold">Bill List</h2>
+<h4>
+    <button class="btn btn-success" *ngIf="role=='admin'" (click)="add()">Add Bill</button>
+    <button class="btn btn-danger" *ngIf="role=='admin'" style="margin-left: 80%;" (click)="back()">Back</button>
+    <button class="btn btn-danger" *ngIf="role=='receptionist'" style="margin-left: 80%;" (click)="back1()">Back</button>
+</h4>
+<table class="table table-stripped table-bordered ">
+    <thead class=" p-3 mb-2 bg-primary text-white">
+        <tr>
+            <th>ID</th>
+            <th>Patient ID</th>
+            <th>Date & Time</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bill of bills"  class="text-white bg-secondary">
+            <td>{{bill.id}}</td>
+            <td>{{bill.patient.id}}</td>
+            <td>{{bill.billDate|date:'medium'}}</td>
+            <td>{{bill.totalAmount}}</td>
+            <td>{{bill.paymentStatus}}</td>
+            <td >
+                <button class="btn btn-light" (click)="updateBill(bill.id)">Update</button>
+                &nbsp;
+                <button class="btn btn-danger"*ngIf="role=='admin'" (click)="deleteBill(bill.id)">Delete</button>                
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

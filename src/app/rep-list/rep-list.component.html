@@ -1,0 +1,41 @@
+<div>
+<h2 class="fw-bold">Receptionist List</h2>
+<h4>
+    <button class="btn btn-primary" *ngIf="role=='admin'" (click)="add()">Add Receptionist</button>
+    <button class="btn btn-danger " *ngIf="role=='admin'"  style="margin-left: 80%;" (click)="back()">Back</button>
+    <button class="btn btn-danger " *ngIf="role=='Recepstionist'"   style="margin-left: 80%;" (click)="back1()">Back</button>
+</h4>
+<table class="table table-stripped table-bordered ">
+    <thead class=" p-3 mb-2 bg-info text-white">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Password</th>
+            <th>City</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rep of reps"  class="text-light bg-secondary">
+            <td>{{rep.name}}</td>
+            <td>{{rep.age}}</td>
+            <td>{{rep.email}}</td>
+            <td>{{rep.gender}}</td>
+            <td>{{rep.phone}}</td>
+            <td>{{rep.password}}</td>
+            <td>{{rep.city}}</td>
+            <td>{{rep.address}}</td>
+            <td >
+                <button class="btn btn-light" (click)="updateRep(rep.id)">Update</button>
+                &nbsp;
+                <button class="btn btn-danger" *ngIf="role=='admin'" (click)="deleteRep(rep.id)">Delete</button>                
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>

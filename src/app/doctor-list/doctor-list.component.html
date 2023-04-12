@@ -1,0 +1,44 @@
+<h2 class="fw-bold">Doctor List</h2>
+<div>     
+      <h4>
+    <button class="btn btn-primary" *ngIf="role=='admin'" (click)="add()">Add Doctor</button>
+                 <button class="btn btn-danger " style="margin-left: 80%;" (click)="back()">Back</button>
+                </h4>
+                     </div>
+<table class="table table-stripped table-bordered ">
+    <thead class=" p-3 mb-2 bg-info text-white">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Password</th>
+            <!-- <th>phone</th> -->
+            <th>City</th>
+            <th>Address</th>
+            <th>Specialization</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let doctor of doctors"  class="text-white  bg-secondary ">
+            <td>{{doctor.id}}</td>
+            <td>{{doctor.name}}</td>
+            <td>{{doctor.age}}</td>
+            <td>{{doctor.gender}}</td>
+            <td>{{doctor.email}}</td>
+            <td>{{doctor.password}}</td>
+            <!-- <td>{{doctor.phone}}</td> -->
+            <td>{{doctor.city}}</td>
+            <td>{{doctor.address}}</td>
+            <td>{{doctor.specialization}}</td>
+            <td >
+                <button class="btn btn-light" (click)="updateDoctor(doctor.id)">Update</button>
+                &nbsp;
+                <button class="btn btn-danger" *ngIf="role=='admin'" (click)="deleteDoctor(doctor.id)">Delete</button>                
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

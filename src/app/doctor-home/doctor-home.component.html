@@ -1,0 +1,85 @@
+<header>
+    <div class="header">
+        <nav  class="navbar navbar-expand-lg  bg-info   justify-content-between list-style-type: none ; ">
+         
+      
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      
+
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li class="nav-item"> <a class="nav-link" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; font-weight: bolder;  padding-left: 0px; font-variant: normal;"> WELLCOME  BACK DOCTOR ....</a></li> -->
+        <li> <a class="btn btn-dark" style="padding-left: 70px;" (click)="doc()"> DOCTOR PROFILE</a></li>
+        <li> <a class="nav-link" routerLink="/doctorHome" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif;padding-left: 700px; "> DASHBOARD</a></li>
+        
+        <li><a class="nav-link"  routerLink="/docHome" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; padding-left: 50px;" >HOME</a></li>
+        <li> <a class="nav-link" routerLink="/login" routerLinkActive="active" style="font-size: x-large; font-family: 'Times New Roman', Times, serif; padding-left: 60px;"> LOGOUT</a></li>
+
+   
+      </ul>
+    </div>
+  </nav>
+  </nav>
+  </div>
+  </header>
+
+
+<h1 style="font-size: xx-large; font-family: 'Times New Roman', Times, serif; font-weight: bold;">DOCTOR DASHBOARD</h1>
+<br>
+<div>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="card-container d-flex flex-wrap text-center">
+        <div class="card mb-3 mr-3" style="width: 18rem;">
+            <img src="https://www.uc.edu/content/dam/uc/news/ahc-public-relations/medicine/tammy-ward1.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg" class="card-img-top" alt="doctors">
+            <div class="card-body"><br>
+                <h5 class="card-title" style="font-family: 'Times New Roman', Times, serif; font-weight: bold; font-size: x-large;">PATIENTS</h5>
+                <p class="card-text"></p>
+                <a (click)="goToPatients()" class="btn btn-primary">View Lists</a>
+            </div>
+        </div>
+        
+        <div class="card mb-3 mr-3" style="width: 18rem;">
+            <img src="https://media.istockphoto.com/photos/filling-patient-registration-form-on-a-computer-picture-id933329058?k=6&m=933329058&s=612x612&w=0&h=6HA2NiJjMt2wqhKGCY_tN14LKEx210ksie1LscbINbg=" class="card-img-top" alt="doctors">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: x-large ; font-family: 'Times New Roman', Times, serif; font-weight: bold;">REGISTRATION</h5>
+                <p class="card-text"></p>
+                <a (click)="goToReps()" class="btn btn-primary">View Lists</a>
+            </div>
+        </div>
+
+        <div class="card mb-3 mr-3" style="width: 18rem;">
+            <img src="https://thumbs.dreamstime.com/z/concept-appointment-to-doctor-online-top-view-83320810.jpg" class="card-img-top" alt="applist">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: x-large;font-family: 'Times New Roman', Times, serif; font-weight: bold;">APPOINTMENTS</h5>
+                <p class="card-text"></p>
+                <a (click)="goToAppList()" class="btn btn-primary">View Lists</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+<br>
+<footer>
+    <div class="footer bg-info text-white" style="position:static; padding: 19px 15px 20px; padding-bottom: 3%;" >
+     {{doctor.name}} All Rights Are Reserved Under @2023 Regulations by Hygegia Corporations.
+      <div class="col-md-6">
+        <div class="col-md-6">
+       
+          <i class="fab fa-facebook-f"></i>
+      
+                  
+                  <i class="fab fa-twitter"></i>
+      
+                  <i class="fab fa-google"></i>
+      
+                 
+                  <i class="fab fa-instagram"></i>
+      
+             
+          </div>
+        
+    </div>
+    </div>
+    </footer>

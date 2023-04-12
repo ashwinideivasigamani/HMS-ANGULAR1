@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <app-header></app-header>
+
+  <div class="body">
+   <div class="container " >
+    <form (ngSubmit)="l.form.valid && onSubmit()" #l="ngForm" novalidate style="text-align-last: left;">
+      <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2 class="text-align-last">LOGIN</h2> -->
+      <!-- <img src="https://www.transport.wa.gov.au/images-content/LoginDefault.png" alt=""> -->
+      <img  height="150px" width="200px" src="https://www.flykk.it/hubfs/Flykk%202020/Flykk%20web%20new%20log%20in.png" alt="">
+      &nbsp;&nbsp;<h3 >{{errorMsg}}</h3>
+      <div class="div1">
+        <div style="float: right; ">
+          <img align="right" height="400px" width="400px" src="https://www.infomedik.net/app/imagenes/Acceso.png" alt="login" class="padding-right:60px ">
+        </div> 
+           <label>Email:</label> <br>
+            <input type="email" name="mail" id="mail" placeholder="Enter your mail "  [(ngModel)]="login.email" name="password" #email="ngModel"
+             [ngClass]="{'is-invalid':l.submitted&&email.invalid}" required><br>
+            <div class="invalid-feedback">EmailId is required</div>
+           
+              
+          <label>Password:</label><br>
+                    <input type="password" name="pwd" id="pwd"placeholder="Enter yourpassword"   [(ngModel)]="login.password" name="password"
+                     #pwd="ngModel" [ngClass]="{'is-invalid':l.submitted&&pwd.invalid}" required><br>
+                    <div class="invalid-feedback">Password is required</div>
+              
+              <label>Select User Type</label>
+              <div class="option"  >
+              <select  type="option"  id="userType"  class="form-control" [(ngModel)]="login.userType" name="userType" required style="text-align: center;"><br>
+                <option value="" disabled>Select User Type</option>
+                <option value="admin">Admin</option>
+                <option value="doctor">Doctor</option>
+                <option value="receptionist">Receptionist</option>
+                <option value="patient">Patient</option>
+                </select>
+                </div>
+        
+                  
+              
+                    <div>
+                      <br>
+                      <button class=" btn btn-success" style="opacity: 1000%; width: 23%; margin-bottom: 1rem; margin-right: 1rem;" type="submit">Submit</button>&nbsp;&nbsp;&nbsp;
+                      <button class="btn btn-danger" style="opacity: 1000%; width: 22%; margin-bottom: 1rem; margin-right: 1rem;" type="reset">Cancel</button>
+                      <br>
+                       
+                    </div>
+                    </div>
+                    </form>
+                  </div>
+                  </div>
+                  <app-footer></app-footer>
+                </body>
+                    </html>
